@@ -1,0 +1,78 @@
+/* Faz o body ocupar toda a tela */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   PALETA DE CORES PERSONALIZADA (AZUL ESCURO PREMIUM)
+   =========================== */
+
+:root {
+  --primary: #0A3D62;        /* Azul profundo */
+  --primary-light: #0E4F80;  /* Azul mais claro para hover */
+  --secondary: #3C6382;      /* Azul acinzentado */
+  --dark: #1E1E1E;           /* Texto escuro */
+  --light: #F4F7FA;          /* Fundo claro */
+  --gray: #DCE2E8;           /* Elementos neutros */
+}
+
+/* Sobrescrevendo o Bootstrap */
+.btn-primary,
+.bg-primary,
+.text-bg-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light) !important;
+  border-color: var(--primary-light) !important;
+}
+
+/* Para elementos de background */
+body {
+  background-color: var(--light) !important;
+  color: var(--dark);
+  font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   ESTILOS GERAIS DO SITE
+   =========================== */
+
+.section {
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.card-custom {
+  background: #fff;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.navbar .btn-custom {
+  background-color: #e2e8f0 !important;  /* cinza claro elegante */
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar .btn-custom:hover {
+  background-color: var(--dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 42, 79, 0.35);
+}
