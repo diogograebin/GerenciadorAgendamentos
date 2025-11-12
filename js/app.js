@@ -1,5 +1,3 @@
-console.log("JS carregado!");
-
 const formNovo = document.getElementById('formNovo');
 const lista = document.getElementById('listaAgendamentos');
 
@@ -40,3 +38,6 @@ function adicionarCard(nome, data, hora, sala) {
 
     lista.appendChild(col);
 }
+
+const modal = bootstrap.Modal.getInstance(document.getElementById('modalNovo'));
+modal.hide();
