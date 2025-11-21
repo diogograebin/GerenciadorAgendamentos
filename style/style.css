@@ -1,24 +1,38 @@
-/* Faz o body ocupar toda a tela */
-html, body {
+/* Correção para garantir visibilidade de labels e inputs em modais */
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* ===========================
-   PALETA DE CORES PERSONALIZADA (AZUL ESCURO PREMIUM)
-   =========================== */
-
-:root {
-  --primary: #0A3D62;        /* Azul profundo */
-  --primary-light: #0E4F80;  /* Azul mais claro para hover */
-  --secondary: #3C6382;      /* Azul acinzentado */
-  --dark: #1E1E1E;           /* Texto escuro */
-  --light: #F4F7FA;          /* Fundo claro */
-  --gray: #DCE2E8;           /* Elementos neutros */
+.modal .form-label {
+  color: var(--dark) !important;
+  font-weight: 500;
+  opacity: 1;
 }
 
-/* Sobrescrevendo o Bootstrap */
+.modal .form-control {
+  background: #fff;
+  color: var(--dark);
+  border: 1px solid var(--gray);
+  opacity: 1;
+}
+
+.modal-header .modal-title {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+:root {
+  --primary: #0A3D62;
+  --primary-light: #0E4F80;
+  --secondary: #3C6382;
+  --dark: #1E1E1E;
+  --light: #F4F7FA;
+  --gray: #DCE2E8;
+}
+
 .btn-primary,
 .bg-primary,
 .text-bg-primary {
@@ -32,16 +46,11 @@ html, body {
   border-color: var(--primary-light) !important;
 }
 
-/* Para elementos de background */
 body {
   background-color: var(--light) !important;
   color: var(--dark);
   font-family: Arial, sans-serif;
 }
-
-/* ===========================
-   ESTILOS GERAIS DO SITE
-   =========================== */
 
 .section {
   padding: 40px 0;
@@ -61,7 +70,7 @@ body {
 }
 
 .navbar .btn-custom {
-  background-color: #e2e8f0 !important;  /* cinza claro elegante */
+  background-color: #e2e8f0 !important;
   color: var(--primary) !important;
   border: 2px solid var(--primary);
   padding: 6px 16px;
